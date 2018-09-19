@@ -25,10 +25,10 @@ import utility.XlsReader;
 
 public class BaseTest {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	public ExtentReports extent=ExtentManager.getInstance();
 	public ExtentTest test;
-	public XlsReader reader;
+	public XlsReader reader= new XlsReader(Constants.FACEBOOK_DATA_SHEET);
 	
 	public void init(String browserType)
 	{
@@ -45,7 +45,7 @@ public class BaseTest {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"//drivers//geckodriver.exe");
 			driver=new FirefoxDriver();
 		}
-		reader = new XlsReader(Constants.FACEBOOK_DATA_SHEET);
+		
 		test.log(LogStatus.INFO, "opened "+browserType+" successfully");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

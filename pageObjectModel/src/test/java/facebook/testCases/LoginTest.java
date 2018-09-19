@@ -34,6 +34,7 @@ public class LoginTest extends BaseTest{
 			test.log(LogStatus.SKIP,"runmode of "+testCaseName+" is no");
 			throw new SkipException("runmode of "+testCaseName+" is no");
 		}
+		init(table.get("browser"));
 		test.log(LogStatus.INFO, "starting login test");
 		test.log(LogStatus.INFO, "opeing browser");
 		init(table.get("browser"));

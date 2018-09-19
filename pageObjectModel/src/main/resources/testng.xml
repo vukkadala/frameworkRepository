@@ -1,0 +1,7 @@
+<suite name="mySuite">
+<test name="seeTests">
+<classes>
+<class name="facebook.testCases.LoginTest"/>
+</classes>
+</test>
+</suite>
