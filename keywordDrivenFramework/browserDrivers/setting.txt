@@ -1,0 +1,5 @@
+System.setProperty("webdriver.gecko.driver", "C:\GeckoDriver\geckodriver.exe");
+System.setProperty("webdriver.chrome.driver", "path");
+System.setProperty("webdriver.ie.driver", "path");
+
+https://chromedriver.storage.googleapis.com/index.html
